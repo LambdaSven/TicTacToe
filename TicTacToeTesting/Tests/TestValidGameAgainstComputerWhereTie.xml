@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- VALID GAME AGAINST COMPUTER WHERE TIE -->
+<Game type="OnePlayer">
+  <Move type="Player">
+    <Play sign="X">256</Play>
+  </Move>
+  <Move type="Computer">
+    <Play sign="O">16</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="X">1</Play>
+  </Move>
+  <Move type="Computer">
+    <Play sign="O">128</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="X">2</Play>
+  </Move>
+  <Move type="Computer">
+    <Play sign="O">4</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="X">64</Play>
+  </Move>
+  <Move type="Computer">
+    <Play sign="O">8</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="X">32</Play>
+  </Move>
+</Game>

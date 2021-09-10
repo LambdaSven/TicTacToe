@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- VALID GAME AGAINST HUMAN WHERE X WINS -->
+<Game type="TwoPlayer">
+  <Move type="Player">
+    <Play sign="X">256</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="O">32</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="X">128</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="O">16</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="X">64</Play>
+  </Move>
+</Game>

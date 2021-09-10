@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="TicTacToe.Views.GameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TicTacToe.Views"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+  <Grid>
+    <!-- 
+         3 colums, with the board and menu buttons being 
+         sub grids within other elements.
+    -->
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="20" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="20" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="auto"/>
+    </Grid.RowDefinitions>
+
+    <!-- Bound Variable to indicate who is playing-->
+    <TextBlock Text="{Binding ToPlayString}"
+               TextAlignment="Center"
+               FontSize="24"
+               Grid.Row="0"
+               Grid.Column="1"/>
+
+    <!-- 
+      Sub Grid containing the board, and with
+      3 30% colums and 3 30% rows.
+    -->
+    <Grid Grid.Row="1" Grid.Column="1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="3*" />
+        <ColumnDefinition Width="3*" />
+        <ColumnDefinition Width="3*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="3*" />
+        <RowDefinition Height="3*" />
+        <RowDefinition Height="3*" />
+      </Grid.RowDefinitions>
+
+      <!-- 
+        9 button for the various squares, each
+        passing the required int as a parameter
+        to the move method
+
+        Uses ViewBox to scale the text inside the buttons dynamically
+        as the board changes size.
+      -->
+
+      <Button x:Name="TopLeft"
+              cal:Message.Attach="Move(256)"
+              Grid.Row="0"
+              Grid.Column="0"
+              FontStretch="UltraExpanded">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[0], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+      <Button x:Name="TopCenter"
+              cal:Message.Attach="Move(128)"
+              Grid.Row="0"
+              Grid.Column="1">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[1], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+      <Button x:Name="TopRight"
+              cal:Message.Attach="Move(64)"
+              Grid.Row="0"
+              Grid.Column="2">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[2], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+      <Button x:Name="MiddleLeft"
+              cal:Message.Attach="Move(32)"
+              Grid.Row="1"
+              Grid.Column="0">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[3], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+      <Button x:Name="MiddleCenter"
+              cal:Message.Attach="Move(16)"
+              Grid.Row="1"
+              Grid.Column="1">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[4], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+      <Button x:Name="MiddleRight"
+              cal:Message.Attach="Move(8)"
+              Grid.Row="1"
+              Grid.Column="2">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[5], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+      <Button x:Name="BottomLeft"
+              cal:Message.Attach="Move(4)"
+              Grid.Row="2"
+              Grid.Column="0">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[6], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+      <Button x:Name="BottomCenter"
+              cal:Message.Attach="Move(2)"
+              Grid.Row="2"
+              Grid.Column="1">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[7], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+      <Button x:Name="BottomRight"
+              cal:Message.Attach="Move(1)"
+              Grid.Row="2"
+              Grid.Column="2">
+        <Viewbox>
+          <TextBlock Text="{Binding XOArray[8], Mode=Default}" />
+        </Viewbox>
+      </Button>
+
+    </Grid>
+
+    <!-- 
+      Sub Grid for the Controls Menu 
+
+      Uses ViewBox to scale the text inside the buttons dynamically
+      as the board changes size.
+    -->
+    <Grid Grid.Row="2" Grid.Column="1" Margin="5">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2.5*" />
+        <ColumnDefinition Width="2.5*" />
+        <ColumnDefinition Width="2.5*" />
+        <ColumnDefinition Width="2.5*" />
+      </Grid.ColumnDefinitions>
+
+      <Button Grid.Column="0" 
+              Grid.Row="0"
+              x:Name="BackToMainMenu">
+        <Viewbox>
+          <TextBlock Text="Main Menu" Padding="5 0"/>
+        </Viewbox>
+      </Button>
+
+      <Button Grid.Column="1" 
+              Grid.Row="0"
+              x:Name="Reset">
+        <Viewbox>
+          <TextBlock Text="Reset" Padding="5 0"/>
+        </Viewbox>
+      </Button>
+
+      <Button Grid.Column="2" 
+              Grid.Row="0"
+              x:Name="SaveGame">
+        <Viewbox>
+          <TextBlock Text="Save Game" Padding="5 0"/>
+        </Viewbox>
+      </Button>
+
+      <Button Grid.Column="3" 
+              Grid.Row="0"
+              x:Name="LoadGame">
+        <Viewbox>
+          <TextBlock Text="Load Game" Padding="5 0"/>
+        </Viewbox>
+      </Button>
+    </Grid>
+  </Grid>
+</UserControl>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- INVALID GAME MULTIPLE X PLAYS -->
+<Game type="OnePlayer">
+  <Move type="Player">
+    <Play sign="X">256</Play>
+  </Move>
+  <Move type="Computer">
+    <Play sign="X">16</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="X">32</Play>
+  </Move>
+  <Move type="Computer">
+    <Play sign="O">4</Play>
+  </Move>
+  <Move type="Player">
+    <Play sign="X">64</Play>
+  </Move>
+  <Move type="Computer">
+    <Play sign="O">128</Play>
+  </Move>
+</Game>
