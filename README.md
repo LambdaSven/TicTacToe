@@ -1,6 +1,9 @@
+
 # TicTacToe
 
 This was the take-home final exam for High Quality Software Programming at Conestoga College.
+
+![tic-tac-toe](https://user-images.githubusercontent.com/50975120/132905493-2b7bfebb-8102-4f6f-b259-e2cc8a534649.png)
 
 This is a GUI-Based Tic Tac Toe game, with a full AI and save/load functionality.
 
