@@ -1,7 +1,7 @@
 
 # TicTacToe
 
-This was the take-home final exam for High Quality Software Programming at Conestoga College.
+This was the take-home final exam for High Quality Software Programming at Conestoga College. This project was implemented from start to finish in a matter of 3 days.
 
 ![tic-tac-toe](https://user-images.githubusercontent.com/50975120/132905493-2b7bfebb-8102-4f6f-b259-e2cc8a534649.png)
 
