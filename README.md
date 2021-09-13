@@ -13,3 +13,5 @@ The GUI is does using the MVVM model, with caliburn micro as a library to facili
 
 The Saves are XML files, as was specified by the exam format, and are saved in a folder in the same directory as the project. If I were to make this again I would use AppData
 But the specification of the exam was clear.
+
+The Testing Suite only covers functionality of the Save/Load functionality, as was specified explicitly on the specifications of the exam.
